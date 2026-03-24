@@ -52,3 +52,80 @@ Typical dataset features:
   - Extra spaces
 
 Example:
+
+
+---
+
+## 🧠 Models Implemented
+
+### 1️⃣ Baseline Model
+- **TF-IDF Vectorization**
+- **Logistic Regression**
+
+
+---
+
+### 2️⃣ Transformer Models
+
+#### 🔹 DistilBERT
+- Pretrained: `distilbert-base-uncased`
+- Tokenization with max length = 128
+- Multiple experiments with:
+  - Learning rates
+  - Batch sizes
+  - Epochs
+
+#### 🔹 BERT
+- Pretrained: `bert-base-uncased`
+- Fine-tuned on dataset
+- Uses HuggingFace Trainer API
+
+---
+
+## ⚙️ Training Details
+
+- Train/Validation split: **80/20**
+- Stratified sampling used
+- Evaluation per epoch
+
+---
+
+## 📈 Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC-AUC (baseline)
+
+*(Replace with your actual results from notebooks)*
+
+---
+
+## 🧪 Experiments
+
+- Compared traditional ML vs transformer models
+- Tuned hyperparameters:
+  - Learning rate
+  - Batch size
+  - Epochs
+- Observed performance improvements using transformers
+
+---
+
+## 📂 Project Structure
+
+├── project-update-1.ipynb # Initial experiments
+├── ProjectUpdate2.ipynb # Advanced models (BERT, DistilBERT)
+├── train.csv # Training dataset
+├── test.csv # Test dataset
+├── README.md
+
+
+---
+
+## ▶️ How to Run
+
+### 1. Install dependencies
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn transformers torch
