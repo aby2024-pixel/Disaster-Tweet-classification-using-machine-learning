@@ -1,25 +1,54 @@
-The ENTIRE code is in the project-update-1.pynb.
+# 🧠 Disaster Tweet Classification using ML & Transformers
 
-You will see a lot of technical issues when importing modules into code.
+This project builds a **text classification system** to identify whether a tweet is related to a real disaster or not.
 
-I typed the code step by step in the beginning in Google Colab. The training took a lot of time, and I was notified that my usage is limited. So, I had to run the code in a Jupyter notebook in HPRC.
+It compares:
+- Traditional Machine Learning models (TF-IDF + Logistic Regression)
+- Transformer-based Deep Learning models (DistilBERT, BERT)
 
-The progress went smoothly until I encountered a wrong result in the prediction of this tweet(Earthquake just hit! Building shaking, people running outside #emergency) as a non-disaster.
+---
 
-That's where something went wrong 
+## 🚀 Project Overview
 
-Then I rewrote the entire code and corrected it at the end, resulting in a good outcome. 
+Social media platforms like Twitter are often used during emergencies. This project aims to automatically classify tweets into:
 
-These outomes are :
+- **Disaster (1)** → Real emergency-related tweet  
+- **Non-Disaster (0)** → Normal or irrelevant tweet  
 
- Tweet: "Forest fire near La Ronge Sask. Canada"
- predicted as Disaster
+The project demonstrates a full NLP pipeline from preprocessing to advanced transformer models.
 
- Tweet: "On plus side look at the sky last night it was ablaze."
- predicted as Non-Disaster
+---
 
- Tweet: "13,000 people receive #wildfires evacuation orders in California"  
-  predicted as Disaster 
+## 🛠️ Tech Stack
 
- Tweet: "I swear that jam will set the world ablaze"
- predicted as Non-Disaster
+- **Python**
+- **Pandas, NumPy**
+- **Scikit-learn**
+- **Matplotlib, Seaborn**
+- **HuggingFace Transformers**
+- **PyTorch**
+
+---
+
+## 📊 Dataset
+
+- Training data: `train.csv`
+- Test data: `test.csv`
+
+Typical dataset features:
+- `text` → Tweet content  
+- `target` → Label (0 or 1)
+
+---
+
+## 🧹 Data Preprocessing
+
+- Lowercasing text
+- Removing:
+  - URLs
+  - Mentions (@user)
+  - Hashtags
+  - Special characters
+  - Extra spaces
+
+Example:
